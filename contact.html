@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactame - Sara Pinilla</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="page">
+    <header class="header">
+        <!-- Navegación web -->
+        <nav>
+            <ul class="navigation">
+                <li><a href="index.html" class="nav-link">TRABAJOS</a></li>
+                <li><a href="sobremi.html" class="nav-link">SOBRE MI</a></li>
+                <li><a href="contact.html" class="nav-link active">CONTACTAME</a></li>
+            </ul>
+        </nav>
+    
+      <!-- Icono de menú hamburguesa RESPONSIVE -->
+    <label class="hamburger-menu" onclick="openmenu()">
+        <img src="Iconos/hamburguesa.png" alt="Menu" class="hamburger-icon">
+    </label>
+
+    <!-- Menú desplegable RESPONSIVE -->
+    <div class="dropdown-menu" id="dropdownMenu">
+        <a href="index.html" class="nav-link">TRABAJOS</a>
+        <a href="sobremi.html" class="nav-link">SOBRE MI</a>
+        <a href="contact.html" class="nav-link">CONTACTAME</a>
+    </div>
+</header>
+
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <section class="contact-section">
+            <h1 class="main-heading">¿Conectamos?</h1>
+            <p class="contact-description">
+                Ya sea que quieras colaborar, hacerme una consulta, o simplemente conectar y compartir ideas, estaré encantada de escucharte. Escríbeme un correo o completa el formulario de contacto aquí abajo.
+            </p>
+            <form class="contact-form" action="mailto:sarapinillamaza2002@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Descripción del proyecto:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit" class="submit-button">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-text">© 2024 Sara Pinilla Maza. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('dropdownMenu');
+            menu.classList.toggle('show-menu');
+        }
+    </script>
+        <script src="script.js"></script>
+</body>
+</html>
