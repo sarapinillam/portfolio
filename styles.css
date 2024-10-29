@@ -73,9 +73,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
-  padding-top: calc(2rem + 4rem);
+  align-content: center;
+  padding: 40px 20px;
+  padding-top: 92px;
   text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 /* Estilo del título */
@@ -259,13 +263,15 @@
 .about-container {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
-  padding: 0 2rem;
   margin-top: 2rem;
 }
 
 .about-text {
-  width: 80%;
+  flex: 1;
+  padding: 0 20px;
   font-size: 1rem;
   font-weight: 300;
   text-align: left;
@@ -351,21 +357,35 @@
 
 /* Estilos para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
-  .about-container {
+  .flex {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0;
-    margin: 30px;
-    overflow-x: hidden;
-    box-sizing: border-box;
+}
+  .about-container {
+      flex-direction: column;
+      text-align: center;
+      padding: 0;
+      width: 100%;
+      box-sizing: border-box;
+
+  }
+  .image__container{
+      width: 100%;
+      box-sizing: border-box;
+    }
+  .about-image {
+      margin-bottom: 1rem;
+      margin-right: 0;
+      width: 100%;
+      object-fit: cover;
+      box-sizing: border-box;
   }
 
-  .about-image {
-    margin-bottom: 1rem;
-    margin-right: 0;
-    align-self: center;
+  .main-heading {
+      font-size: 2rem;
+  }
+  
+  .image__container img{
+    width: 100%;
   }
   .page {
     max-width: 100%;
@@ -397,6 +417,7 @@
     padding: 40px 20px;
     margin: 0;
     align-content: center;
+    box-sizing: border-box;
   }
 
   .main-heading{
@@ -405,7 +426,9 @@
 
   .about-text{
     justify-items: center;
+    box-sizing: border-box;
   }
 
-  
+
+
 }
